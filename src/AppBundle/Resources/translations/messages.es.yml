@@ -1,0 +1,21 @@
+CodigoUNSPSC: Código UNSPSC
+Adquisicion: Adquisición
+User: Usuarios
+label:
+    adquisicion:
+        importar: Importar datos de adquisición.
+    download: 
+        template: Descargar plantilla
+    file: Archivo
+    send: Enviar
+error:
+    create:
+        excel: Error al leer el archivo Excel adjunto, por favor intente de nuevo.   
+    message:
+        import:
+            data: 
+                empty: No hay datos para subir en el documento adjunto.
+            header.not.exist:
+                title: El título "%header%", no es existe en el formato.
+                data: El título "%header%", en la columna "%column%", no es valido para este formato. 
+

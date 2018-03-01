@@ -1,0 +1,32 @@
+services:
+    app.admin.codigo_unspsc:
+        class: AppBundle\Admin\CodigoUNSPSCAdmin
+        arguments: [~, AppBundle\Entity\CodigoUNSPSC, AppBundle:CodigoUNSPSCAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: CodigoUNSPSC }
+        public: true
+
+    app.admin.adquisicion:
+        class: AppBundle\Admin\AdquisicionAdmin
+        arguments: [~, AppBundle\Entity\Adquisicion, AppBundle:AdquisicionAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Adquisicion }
+        public: true
+        
+    AppBundle\Form\Type\ImportarDatosFormType:
+        arguments: ['@service_container']
+        tags: [form.type]
+
+    app.admin.user:
+        class: AppBundle\Admin\UserAdmin
+        arguments: [~, AppBundle\Entity\User, AppBundle:UserAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: user, label: User }
+        public: true
+
+    app.admin.entidad:
+        class: AppBundle\Admin\EntidadAdmin
+        arguments: [~, AppBundle\Entity\Entidad, AppBundle:EntidadAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Entidad }
+        public: true
